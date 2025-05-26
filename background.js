@@ -1,1 +1,3 @@
-// Peut être utilisé plus tard pour des fonctions avancées
+chrome.runtime.onInstalled.addListener(() => {
+    console.log("WebCluster extension installée")
+})
