@@ -5,7 +5,6 @@
   <title>WebCluster</title>
   <link rel="stylesheet" href="styles.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -27,8 +26,18 @@
 
   <!-- Main Content -->
   <div class="main-content">
-    <!-- Create Group Section -->
+    <!-- Create/Edit Group Section -->
     <div class="create-section" id="createSection">
+      <div class="section-title">
+        <h3 id="sectionTitle">
+          <i class='bx bx-folder-plus'></i>
+          Créer un groupe
+        </h3>
+        <button class="cancel-edit-btn" id="cancelEditBtn" style="display: none;">
+          <i class='bx bx-x'></i>
+        </button>
+      </div>
+
       <div class="input-group">
         <label for="groupName">
           <i class='bx bx-folder-plus'></i>
@@ -55,7 +64,7 @@
 
       <button id="saveGroup" class="save-btn">
         <i class='bx bx-save'></i>
-        Sauvegarder le groupe
+        <span id="saveBtnText">Sauvegarder le groupe</span>
       </button>
     </div>
 
