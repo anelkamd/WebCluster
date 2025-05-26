@@ -5,7 +5,7 @@
   "description": "Créez et lancez des groupes de sites web en un clic avec animations fluides !",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": "iconWebCluster.png"
+    "default_icon": "icons/iconApp.png"
   },
   "background": {
     "service_worker": "background.js"
