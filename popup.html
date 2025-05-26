@@ -4,23 +4,85 @@
   <meta charset="UTF-8">
   <title>WebCluster</title>
   <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-  <h1>🚀 WebCluster</h1>
-  <div id="groups"></div>
-  <input type="text" id="groupName" placeholder="Nom du groupe (avec emoji)">
-  <input type="text" id="urlInput" placeholder="Ajouter une URL">
-  <button id="addUrl">Ajouter</button>
-  <button id="saveGroup">💾 Sauvegarder le groupe</button>
-  <hr>
-  <div>
-    <button id="exportBtn">📤 Exporter</button>
-    <button id="importBtn">📥 Importer</button>
-    <input type="file" id="importFile" style="display:none">
+<div class="container">
+  <!-- Header Section -->
+  <div class="header">
+    <div class="logo-section">
+      <div class="logo">
+        <i class='bx bx-world'></i>
+      </div>
+      <div class="header-content">
+        <h1>WebCluster</h1>
+        <p class="description">Créez et lancez des groupes de sites web en un clic</p>
+      </div>
+      <button class="info-btn" id="infoBtn">
+        <i class='bx bx-info-circle'></i>
+      </button>
+    </div>
   </div>
-  <hr>
-  <div id="groupList"></div>
-  <script src="popup.js"></script>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Create Group Section -->
+    <div class="create-section" id="createSection">
+      <div class="input-group">
+        <label for="groupName">
+          <i class='bx bx-folder-plus'></i>
+          Nom du groupe
+        </label>
+        <input type="text" id="groupName" placeholder="Ex: 📱 Mon réseau social">
+      </div>
+
+      <div class="urls-section">
+        <div class="url-list" id="urlList"></div>
+        <div class="input-group">
+          <label for="urlInput">
+            <i class='bx bx-link'></i>
+            Ajouter une URL
+          </label>
+          <div class="url-input-container">
+            <input type="text" id="urlInput" placeholder="https://example.com">
+            <button id="addUrl" class="add-url-btn">
+              <i class='bx bx-plus'></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button id="saveGroup" class="save-btn">
+        <i class='bx bx-save'></i>
+        Sauvegarder le groupe
+      </button>
+    </div>
+
+    <!-- Groups List -->
+    <div class="groups-section">
+      <div class="section-header">
+        <h3>
+          <i class='bx bx-collection'></i>
+          Mes groupes
+        </h3>
+        <div class="actions">
+          <button id="exportBtn" class="action-btn" title="Exporter">
+            <i class='bx bx-export'></i>
+          </button>
+          <button id="importBtn" class="action-btn" title="Importer">
+            <i class='bx bx-import'></i>
+          </button>
+        </div>
+      </div>
+      <div id="groupList" class="group-list"></div>
+    </div>
+  </div>
+
+  <!-- Hidden file input -->
+  <input type="file" id="importFile" style="display:none" accept=".json">
+</div>
+
+<script src="popup.js"></script>
 </body>
 </html>
