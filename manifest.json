@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "WebCluster",
+  "version": "1.0",
+  "description": "Crée et lance des groupes de sites web en un clic avec animations fluides !",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "iconWebCluster.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["<all_urls>"]
+}

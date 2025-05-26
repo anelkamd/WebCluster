@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>WebCluster</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <h1>🚀 WebCluster</h1>
+  <div id="groups"></div>
+  <input type="text" id="groupName" placeholder="Nom du groupe (avec emoji)">
+  <input type="text" id="urlInput" placeholder="Ajouter une URL">
+  <button id="addUrl">Ajouter</button>
+  <button id="saveGroup">💾 Sauvegarder le groupe</button>
+  <hr>
+  <div>
+    <button id="exportBtn">📤 Exporter</button>
+    <button id="importBtn">📥 Importer</button>
+    <input type="file" id="importFile" style="display:none">
+  </div>
+  <hr>
+  <div id="groupList"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
