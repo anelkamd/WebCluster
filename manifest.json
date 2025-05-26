@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "WebCluster",
   "version": "1.0",
-  "description": "Créez et lancez des groupes de sites web en un clic avec animations fluides !",
+  "description": "Créez et lancez des groupes de sites web en un clic avec simpliciter !",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icons/iconApp.png"
