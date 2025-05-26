@@ -1,5 +1,5 @@
 <p align="center">
-  ![iconWebCluster](https://github.com/user-attachments/assets/1fc7b5f5-41a3-4aba-a700-926382c196ea)
+  <img src="iconApp.png" width="100" alt="WebCluster Logo" />
 </p>
 
 <h1 align="center">WebCluster</h1>
