@@ -1,108 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>WebCluster</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="/icons/iconApp.png" type="image/x-icon">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <meta charset="UTF-8">
+  <title>WebCluster</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="/icons/iconApp.png" type="image/x-icon">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 <div class="container">
-    <!-- Header Section -->
-    <div class="header">
-        <div class="logo-section">
-            <div class="logo">
-                <i data-lucide="globe"></i>
-            </div>
-            <div class="header-content">
-                <h1>WebCluster</h1>
-                <p class="description">Créez et lancez des groupes de sites web en un clic</p>
-            </div>
-            <button class="info-btn" id="infoBtn">
-                <i data-lucide="info"></i>
-            </button>
-        </div>
+  <div class="header">
+    <div class="logo-section">
+      <div class="logo">
+        <i class='bx bx-world'></i>
+      </div>
+      <div class="header-content">
+        <h1>WebCluster</h1>
+        <p class="description">Créez et lancez des groupes de sites web en un clic</p>
+      </div>
+      <button class="info-btn" id="infoBtn">
+        <i class='bx bx-info-circle'></i>
+      </button>
     </div>
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Create/Edit Group Section -->
-        <div class="create-section" id="createSection">
-            <div class="section-title">
-                <h3 id="sectionTitle">
-                    <i data-lucide="folder-plus"></i>
-                    Créer un groupe
-                </h3>
-                <button class="cancel-edit-btn" id="cancelEditBtn" style="display: none;">
-                    <i data-lucide="x"></i>
-                </button>
-            </div>
+  </div>
+  <div class="main-content">
+    
+    <div class="create-section" id="createSection">
+      <div class="section-title">
+        <h3 id="sectionTitle">
+          <i class='bx bx-folder-plus'></i>
+          Créer un groupe
+        </h3>
+        <button class="cancel-edit-btn" id="cancelEditBtn" style="display: none;">
+          <i class='bx bx-x'></i>
+        </button>
+      </div>
 
-            <div class="form-row">
-                <div class="input-group flex-1">
-                    <label for="groupName">
-                        <i data-lucide="folder"></i>
-                        Nom du groupe
-                    </label>
-                    <input type="text" id="groupName" placeholder="Ex: 📱 Mon réseau social">
-                </div>
+      <div class="form-row">
+        <div class="input-group flex-1">
+          <label for="groupName">
+            <i class='bx bx-folder'></i>
+            Nom du groupe
+          </label>
+          <input type="text" id="groupName" placeholder="Ex: 📱 Mon réseau social">
+        </div>
+        
+        <div class="input-group color-group">
+          <label for="groupColor">
+            <i class='bx bx-palette'></i>
+            Couleur
+          </label>
+          <div class="color-selector">
+            <input type="color" id="groupColor" value="#667eea">
+            <div class="color-presets" id="colorPresets"></div>
+          </div>
+        </div>
+      </div>
 
-                <div class="input-group color-group">
-                    <label for="groupColor">
-                        <i data-lucide="palette"></i>
-                        Couleur
-                    </label>
-                    <div class="color-selector">
-                        <input type="color" id="groupColor" value="#667eea">
-                        <div class="color-presets" id="colorPresets"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="urls-section">
-                <div class="url-list" id="urlList"></div>
-                <div class="input-group">
-                    <label for="urlInput">
-                        <i data-lucide="link"></i>
-                        Ajouter une URL
-                    </label>
-                    <div class="url-input-container">
-                        <input type="text" id="urlInput" placeholder="https://example.com">
-                        <button id="addUrl" class="add-url-btn">
-                            <i data-lucide="plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <button id="saveGroup" class="save-btn">
-                <i data-lucide="save"></i>
-                <span id="saveBtnText">Sauvegarder le groupe</span>
+      <div class="urls-section">
+        <div class="url-list" id="urlList"></div>
+        <div class="input-group">
+          <label for="urlInput">
+            <i class='bx bx-link'></i>
+            Ajouter une URL
+          </label>
+          <div class="url-input-container">
+            <input type="text" id="urlInput" placeholder="https://example.com">
+            <button id="addUrl" class="add-url-btn">
+              <i class='bx bx-plus'></i>
             </button>
+          </div>
         </div>
+      </div>
 
-        <!-- Groups List -->
-        <div class="groups-section">
-            <div class="section-header">
-                <h3>
-                    <i data-lucide="layers"></i>
-                    Mes groupes
-                </h3>
-                <div class="actions">
-                    <button id="exportBtn" class="action-btn" title="Exporter">
-                        <i data-lucide="download"></i>
-                    </button>
-                    <button id="importBtn" class="action-btn" title="Importer">
-                        <i data-lucide="upload"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="groupList" class="group-list"></div>
-        </div>
+      <button id="saveGroup" class="save-btn">
+        <i class='bx bx-save'></i>
+        <span id="saveBtnText">Sauvegarder le groupe</span>
+      </button>
     </div>
 
-    <!-- Hidden file input -->
-    <input type="file" id="importFile" style="display:none" accept=".json">
+    <div class="groups-section">
+      <div class="section-header">
+        <h3>
+          <i class='bx bx-collection'></i>
+          Mes groupes
+        </h3>
+        <div class="actions">
+          <button id="exportBtn" class="action-btn" title="Exporter">
+            <i class='bx bx-export'></i>
+          </button>
+          <button id="importBtn" class="action-btn" title="Importer">
+            <i class='bx bx-import'></i>
+          </button>
+        </div>
+      </div>
+      <div id="groupList" class="group-list"></div>
+    </div>
+  </div>
+
+  <input type="file" id="importFile" style="display:none" accept=".json">
 </div>
 
 <script src="popup.js"></script>
