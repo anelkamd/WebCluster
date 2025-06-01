@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="iconApp.png" width="100" alt="WebCluster Logo" />
+  <img src="/icons/iconApp.png" width="100" alt="WebCluster Logo" />
 </p>
 
 <h1 align="center">WebCluster</h1>
@@ -8,7 +8,7 @@
   🔗 Create, organize, and launch groups of websites in one click — fast, elegant, and simple.
 </p>
 
-<p align="center"><strong>✨ Built by Anelka MD</strong></p>
+<p align="center"><strong>✨ Built by Anelka</strong></p>
 
 ---
 
@@ -88,11 +88,6 @@ This tool was built to simplify the daily task of **grouping resources** and lau
 ## 🧑‍💻 Author
 
 > **Anelka MD** — a developer passionate about creating tools that boost productivity with simplicity.
-
----
-
-## 🧩 Screenshots
-
 
 ---
 
