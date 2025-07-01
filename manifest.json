@@ -3,6 +3,11 @@
   "name": "WebCluster",
   "version": "1.0",
   "description": "Créez et lancez des groupes de sites web en un clic avec simpliciter !",
+  "icons": {
+    "16": "icons/iconApp.png",
+    "48": "icons/iconApp.png",
+    "128": "icons/iconApp.png"
+  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icons/iconApp.png"
