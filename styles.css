@@ -56,6 +56,10 @@ r
   color: white;
 }
 
+.logo img {
+  border-radius: 8px;
+}
+
 .header-content {
   flex: 1;
   min-width: 0;

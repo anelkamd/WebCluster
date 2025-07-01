@@ -731,3 +731,7 @@ if (document.readyState === "loading") {
   initializeColorPresets()
   updateSaveButton()
 }
+
+document.getElementById("infoBtn").addEventListener("click", () => {
+  chrome.tabs.create({ url: "https://x.com/iam_anelka" });
+});
