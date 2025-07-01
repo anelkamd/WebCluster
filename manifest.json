@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "WebCluster",
   "version": "1.0",
-  "description": "Créez et lancez des groupes de sites web en un clic avec simpliciter !",
+  "description": "Créez et lancez des groupes de sites web en un clic avec simpliciter ! Conding by Anelka",
   "icons": {
     "16": "icons/iconApp.png",
     "48": "icons/iconApp.png",
